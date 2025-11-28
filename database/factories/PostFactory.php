@@ -16,8 +16,16 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
+            $randNum = rand(1,1000);
         return [
-            //
+            'post_title' => fake()->sentence(6),
+            'post_body' => fake()->paragraph(3),
+            'thumbnail' => "https://picsum.photos/id/$randNum/200/200",
+            'user_id' => fake()->randomNumber(9),
+            'post_status_id' => fake()->randomNumber(9),
+            'created_at' => fake()->dateTime(),
+            'updated_at' => fake()->dateTime(),
+            'deleted_at' => fake()->dateTime(),
         ];
     }
 }

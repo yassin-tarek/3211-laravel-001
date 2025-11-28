@@ -32,11 +32,11 @@ class DatabaseSeeder extends Seeder
 
         User::factory(1000)->create();
         Post::factory(1000)->create();
-        Comment::factory(1000)->create();
-        Reply::factory(1000)->create();
+        Comments::factory(1000)->create();
+        // Reply::factory(1000)->create();
         Poststatus::factory(1000)->create();
-        Reaction::factory(1000)->create();
-        Reactiontype::factory(1000)->create();
+        // Reaction::factory(1000)->create();
+        // Reactiontype::factory(1000)->create();
     }
 
 }
